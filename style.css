@@ -1,0 +1,38 @@
+/* *{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    margin-top: 40vh;
+    text-align: center;
+    background: #c7bdbd;
+}
+#main input{
+    background: #ffffff;
+    padding-block:1.2em ;
+    border-radius: 1em;
+    border: none;
+    padding-left: 1em;
+    font-weight: 500;
+}
+#button-flex{
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+    gap: 1em;
+}
+button{
+    border-radius: 1em;
+    border: none;
+    background: #ffffff;
+    padding: .6em 2.5em;
+    color: rgb(84, 82, 82);
+    font-size: .9em;
+    font-weight: 500;
+}
+
+#total-amt{
+    margin-top: 2em;
+    margin-right: 11em;
+} */
