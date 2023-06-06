@@ -1,4 +1,4 @@
-/* *{
+*{
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
@@ -24,7 +24,7 @@ body{
 }
 button{
     border-radius: 1em;
-    border: none;
+    /* border: none; */
     background: #ffffff;
     padding: .6em 2.5em;
     color: rgb(84, 82, 82);
@@ -35,4 +35,4 @@ button{
 #total-amt{
     margin-top: 2em;
     margin-right: 11em;
-} */
+}
