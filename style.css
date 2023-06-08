@@ -9,7 +9,8 @@ body{
     background: #c7bdbd;
 }
 h2{
-    font-size: 1.5em;
+    margin-inline:1em ;
+    font-size: 1.3em;
     text-align: center;
 }
 #main input{
@@ -19,24 +20,47 @@ h2{
     border: none;
     padding-left: 1em;
     font-weight: 500;
+    box-shadow: .2em .2em .2em .1em;
 }
 #button-flex{
     display: flex;
     justify-content: center;
     margin-top: 2em;
-    gap: 1em;
+    gap: .5em;
 }
 button{
+    text-decoration:wavy;
     border-radius: 1em;
-    /* border: none; */
+    border: none;
     background: #ffffff;
-    padding: .6em 2.5em;
+    padding: .6em 1em;
     color: rgb(84, 82, 82);
     font-size: .9em;
+    box-shadow: .4em .4em .2em .1em;
     font-weight: 500;
+}
+button:hover {
+    background: #000;
+    color:#c7bdbd;
+    box-shadow: .4em .4em .2em .1em;
 }
 
 #total-amt{
-    margin-block: 2em;
+    margin-block: 1em;
+}
 
+@media (min-width:700px){
+    #button-flex{
+        gap: 1em;
+    }
+    #main input{
+        padding: 1.5em 3em;
+    }
+    h2{
+        font-size: 1.5em;
+    }
+    button{
+        font-size: 1em;
+        padding: 1em 2.5em;
+    }
 }
