@@ -1,44 +1,48 @@
+// let person = prompt('❌ You cannot withdraw more than what you have!');
+
 class Bank {
-  constructor(balance){
-    this.balance = balance
+  constructor(balance) {
+    this.balance = balance;
   }
 
-  withdrew(amount){
-    if (this.balance - amount <= 0){
-      console.log('❌ You cannot withdraw more than what you have!')
-      console.log({balance:this.balance})
-      return
+  withdrew(amount) {
+    if (this.balance - amount <= 0) {
+      messageDiv.innerText = `('❌ You cannot withdraw less 100 than what you have!')`;
+      console.log('❌ You cannot withdraw more than what you have!');
+      console.log({ balance: this.balance });
+      return;
     }
-    this.balance -= amount
-    console.log('withdrew' , `$${amount}`)
-    console.log({balance:this.balance})
+    this.balance -= amount;
+    console.log('withdrew', `$${amount}`);
+    console.log({ balance: this.balance });
   }
 
-  deposit(amount){
-    this.balance += amount
-    console.log('deposit' , `${amount}`)
-    console.log({balance:this.balance})
+  deposit(amount) {
+    this.balance += amount;
+    console.log('deposit', `${amount}`);
+    console.log({ balance: this.balance });
   }
 }
-const saadChecking = new Bank(0)
-console.log(saadChecking.balance)
-// saadChecking.deposit(1000)
-// saadChecking.deposit(1200)
-// saadChecking.withdrew(500)
-  
-const amountInput = document.getElementById('amount')
-const depositButton = document.getElementById('creadit-btn') 
-const withdrewButton = document.getElementById('deposit-btn')
-const balanceDiv = document.getElementById('total-amt')
-  
+
+const saadChecking = new Bank(0);
+console.log(saadChecking.balance);
+
+
+const amountInput = document.getElementById('amount');
+const depositButton = document.getElementById('deposit-btn');
+const withdrewButton = document.getElementById('credit-btn'); // Corrected typo in button id
+const balanceDiv = document.getElementById('total-amt');
+const messageDiv = document.getElementById('message-amt')
+
+withdrewButton.onclick = () => {
+  const amount = Number(amountInput.value);
+  saadChecking.withdrew(amount);
+  balanceDiv.innerHTML = `Total amount $${saadChecking.balance}`;
+};
+
 depositButton.onclick = () => {
-  const amount = Number (amountInput.value)
-  saadChecking.deposit(amount)
-  balanceDiv.innerText = `Total-balance: ${saadChecking.balance}`
-}
+  const amount = Number(amountInput.value);
+  saadChecking.deposit(amount);
+  balanceDiv.innerHTML = `Total amount $${saadChecking.balance}`;
+};
 
-withdrawButton.onClick = () => {
-  const amount = Number (amountInput.value)
-  saadChecking.withdrew(amount)
-  balanceDiv.innerText = `Total-balance: ${saadChecking.balance}`
-}

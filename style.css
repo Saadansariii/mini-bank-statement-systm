@@ -8,6 +8,10 @@ body{
     text-align: center;
     background: #c7bdbd;
 }
+h2{
+    font-size: 1.5em;
+    text-align: center;
+}
 #main input{
     background: #ffffff;
     padding-block:1.2em ;
@@ -33,6 +37,6 @@ button{
 }
 
 #total-amt{
-    margin-top: 2em;
-    margin-right: 11em;
+    margin-block: 2em;
+
 }
